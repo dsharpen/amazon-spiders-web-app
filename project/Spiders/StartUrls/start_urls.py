@@ -19,7 +19,9 @@ def generate_urls_dict():
 		Generates dictionary of all category URLS to be scrapped
 	'''
 	start_urls_dict = collections.OrderedDict()	
-	path_to_file = os.path.realpath('StartUrls/Start_Urls.csv')	
+	path = os.getcwd()
+	print path
+	path_to_file = os.path.realpath(path+'/StartUrls/Start_Urls.csv')	
 	file = open(path_to_file, 'r')
 
 	for row in csv.reader(file):		

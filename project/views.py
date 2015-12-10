@@ -24,7 +24,6 @@ def start_spiders():
 	os.getcwd()
 	if request.method == 'POST' and form.validate_on_submit:
 		spider_choice =  form.spider_choice.data		
-		
 		path = os.getcwd()		
 		os.chdir('Spiders')		
 		spider_choice = spider_choice.replace("'",'')
